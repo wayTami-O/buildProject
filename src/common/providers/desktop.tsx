@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export function DesktopProvider() {
 
-    const [show,setShow] = useState<boolean>(true);
+    const [show, setShow] = useState<boolean>(true);
 
     useEffect(() => {
         const handleResize = () => {

@@ -4,8 +4,8 @@ import { inter } from "@/styles/fonts";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Script from "next/script";
-import { ExpandedTelegram } from "@/lib/expanded-telegram";
-import { DesktopProvider } from "@/common/providers/desktop";
+// import { ExpandedTelegram } from "@/lib/expanded-telegram";
+// import { DesktopProvider } from "@/common/providers/desktop";
 
 export const metadata: Metadata = {
   title: "Telegram App",
@@ -27,8 +27,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <ExpandedTelegram/>
-        <DesktopProvider/>
+        {/* <ExpandedTelegram/> */}
+        {/* <DesktopProvider/> */}
         
       </body>
     </html>
