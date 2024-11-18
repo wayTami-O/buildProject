@@ -81,6 +81,7 @@ html {
 
 @media(max-width:768px) {
   html {
-    font-size: 3.75vw;
+    /* font-size: 3.75vw; */
+    font-size: 4.103vw;
   }
 }
