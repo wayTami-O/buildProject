@@ -58,6 +58,9 @@ const config = {
         },
         dark72: "#000000B8",
         yellow: "#FFC423",
+        dark: "#0B0B0B",
+        greyText: "#979797",
+        yellowOpacity: "#FFEAB0",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -73,15 +76,27 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "slideInFromLeft":{
+          '0%': { 
+            transform: 'translateX(-100%)'
+          },
+          '100%': { 
+            transform: 'translateX(0)' 
+          },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slideInFromLeft": 'slideInFromLeft 300ms ease-out'
       },
     },
     fontSize: {
       10: "0.625rem",
       11: "0.688rem",
+      13: "0.813rem",
+      24: "1.5rem",
+      32: "2rem"
     }
   },
   plugins: [require("tailwindcss-animate")],
