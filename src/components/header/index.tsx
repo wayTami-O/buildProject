@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { inter, popins } from "@/styles/fonts";
 import BurgerMenu from "./burgerMenu";
-import { useState } from "react";
 
 import { create } from "zustand";
 
@@ -14,19 +13,29 @@ interface burgerType {
     setValueBurger: () => void,
     activePage: pages,
     setActivePage: (page: pages) => void
+    animateCloseBurger: boolean,
+    setAnimateCloseBurger: () => void
 }
 
 export const useBurger = create<burgerType>((set) => ({
     valueBurger: false,
     setValueBurger: () => set((state) => ({ valueBurger: !state.valueBurger })),
     activePage: "Главная",
-    setActivePage: (page: pages) => set(() => ({ activePage: page }))
+    setActivePage: (page: pages) => set(() => ({ activePage: page })),
+    animateCloseBurger: false,
+    setAnimateCloseBurger: () => set(() => ({ animateCloseBurger: true }))
 }))
 
 export function Header() {
 
     const valueBurger = useBurger((state) => state.valueBurger)
     const setValueBurger = useBurger((state) => state.setValueBurger)
+
+    const animateCloseBurger = useBurger((state) => state.animateCloseBurger)
+    const setAnimateCloseBurger = useBurger((state) => state.setAnimateCloseBurger)
+
+    console.log(valueBurger);
+    console.log(animateCloseBurger);
 
     return(
         <>
@@ -38,7 +47,13 @@ export function Header() {
                         width={19}
                         height={16}
                         className="w-[1.5rem] h-[1rem]"
-                        onClick={setValueBurger}
+                        onClick={() => {
+                            setValueBurger()
+                            setAnimateCloseBurger()
+                            // console.log('click');
+                            console.log(valueBurger);
+                            // console.log(animateCloseBurger);
+                        }}
                     />
                     <p className={`${popins.className} text-11 text-white`}>Профиль</p>
                 </div>
@@ -54,7 +69,13 @@ export function Header() {
                 </div>
                 <p className={`${inter.className} text-yellow text-10`}>Войти в аккаунт</p>
             </header>
-            { valueBurger && <BurgerMenu /> }
+            {
+                valueBurger
+                ? <BurgerMenu styleAnimate="animate-slideInFromLeft" />
+                : animateCloseBurger 
+                    ? <BurgerMenu styleAnimate="animate-slideToFromLeft transform translate-x-[-100%]" /> 
+                    : null
+            }
         </>
     );
 }

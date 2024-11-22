@@ -1,7 +1,6 @@
 'use client'
 import { pages, useBurger } from "@/components/header/index";
 import { inter, popins } from "@/styles/fonts";
-import { link } from "fs";
 import Link from "next/link";
 
 interface burgerButtons { 
@@ -36,14 +35,18 @@ const arrayBurgerButtons: burgerButtons[] = [
     }
 ]
 
-function BurgerMenu() {
+interface burgerTypeProps {
+    styleAnimate: string | null
+}
+
+function BurgerMenu({ styleAnimate }: burgerTypeProps) {
 
     const setValueBurger = useBurger((state) => state.setValueBurger)
     const activePage = useBurger((state) => state.activePage)
 
     return (
         <>
-            <div className="animate-slideInFromLeft fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll">
+            <div className={`${styleAnimate} fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll`}>
                 <p onClick={setValueBurger} className="absolute top-[1.5rem] left-[1.25rem] text-yellow text-24">✕</p>
                 <nav className="flex items-center justify-center flex-col gap-[2.5rem] pt-[0.75rem]">
                     {
