@@ -61,6 +61,7 @@ const config = {
         dark: "#0B0B0B",
         greyText: "#979797",
         yellowOpacity: "#FFEAB0",
+        white71: '#E8E8E8B5'
       },
       borderRadius: {
         lg: "var(--radius)",

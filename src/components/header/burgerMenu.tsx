@@ -46,7 +46,7 @@ function BurgerMenu({ styleAnimate }: burgerTypeProps) {
 
     return (
         <>
-            <div className={`${styleAnimate} fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll`}>
+            <div className={`${styleAnimate} fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll overflow-y-hidden`}>
                 <p onClick={setValueBurger} className="absolute top-[1.5rem] left-[1.25rem] text-yellow text-24">✕</p>
                 <nav className="flex items-center justify-center flex-col gap-[2.5rem] pt-[0.75rem]">
                     {

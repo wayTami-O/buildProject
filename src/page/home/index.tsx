@@ -1,17 +1,18 @@
 import Image from "next/image";
-import Link from "next/link";
+import SocialBlock from "@/components/everyPage/socialBlock/SocialBlock";
 
 export function HomePage() {
   return (
-    <div className="">
-      {/* <Image
-        src={'/logo.svg'}
-        alt="Logo cat ecl"
-        width={512}
-        height={512}
-        className=" w-64 h-64"
+    <div className="flex flex-col">
+      <Image 
+        src={'/indexPhoto.png'}
+        width={390}
+        height={349}
+        alt="Hero img"
+        className="w-full h-[21.813rem]"
       />
-      <Link href="/secondPage">wwwwwwwww</Link> */}
+      <SocialBlock />
+      
     </div>
   )
 }
