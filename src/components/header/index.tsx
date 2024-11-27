@@ -39,7 +39,7 @@ export function Header() {
 
     return(
         <>
-            <header className={`fixed flex justify-between items-center w-full h-[4.5rem] bg-dark72 px-[1.469rem]`}>
+            <header className={`fixed z-50 flex justify-between items-center w-full h-[4.5rem] bg-dark72 px-[1.469rem]`}>
                 <div className="flex items-center gap-[0.875rem]">
                     <Image 
                         src ={'/burger-button.svg'}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SocialBlock from "@/components/everyPage/socialBlock/SocialBlock";
+import SliderProcess from "@/components/homePage/SliderProcess";
 
 export function HomePage() {
   return (
@@ -12,7 +13,7 @@ export function HomePage() {
         className="w-full h-[21.813rem]"
       />
       <SocialBlock />
-      
+      <SliderProcess />
     </div>
   )
 }
