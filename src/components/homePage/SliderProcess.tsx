@@ -6,7 +6,6 @@ import SlideProcess from "./SlideProcess";
 import { linksPage } from "@/common/constanst";
 import { Navigation } from "swiper/modules";
 import { slideProcessType } from "./SlideProcess";
-import { popins } from "@/styles/fonts";
 import 'swiper/swiper-bundle.css'
 
 const dataSlider: slideProcessType[] =  [

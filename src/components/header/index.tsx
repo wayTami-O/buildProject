@@ -34,12 +34,9 @@ export function Header() {
     const animateCloseBurger = useBurger((state) => state.animateCloseBurger)
     const setAnimateCloseBurger = useBurger((state) => state.setAnimateCloseBurger)
 
-    console.log(valueBurger);
-    console.log(animateCloseBurger);
-
     return(
         <>
-            <header className={`fixed z-50 flex justify-between items-center w-full h-[4.5rem] bg-dark72 px-[1.469rem]`}>
+            <header className={`fixed z-40 flex justify-between items-center w-full h-[4.5rem] bg-dark72 px-[1.469rem]`}>
                 <div className="flex items-center gap-[0.875rem]">
                     <Image 
                         src ={'/burger-button.svg'}
@@ -50,9 +47,6 @@ export function Header() {
                         onClick={() => {
                             setValueBurger()
                             setAnimateCloseBurger()
-                            // console.log('click');
-                            console.log(valueBurger);
-                            // console.log(animateCloseBurger);
                         }}
                     />
                     <p className={`${popins.className} text-11 text-white`}>Профиль</p>

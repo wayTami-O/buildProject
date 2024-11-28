@@ -1,7 +1,9 @@
 'use client'
+
 import { pages, useBurger } from "@/components/header/index";
 import { inter, popins } from "@/styles/fonts";
 import Link from "next/link";
+import { linksPage } from "@/common/constanst";
 
 interface burgerButtons { 
     title: pages,
@@ -11,27 +13,27 @@ interface burgerButtons {
 const arrayBurgerButtons: burgerButtons[] = [
     {
         title: "Главная",
-        link: "/"
+        link: linksPage.main
     },
     {
         title: "Расчёт",
-        link: "/calculation"
+        link: linksPage.calculation
     },
     {
         title: "Проекты",
-        link: "/projects"
+        link: linksPage.projects
     },
     {
         title: "Команда",
-        link: "/team"
+        link: linksPage.team
     },
     {
         title: "Франшиза",
-        link: "/franchise"
+        link: linksPage.franchise
     },
     {
         title: "Контакты",
-        link: "/contacts"
+        link: linksPage.contacts
     }
 ]
 
@@ -46,7 +48,7 @@ function BurgerMenu({ styleAnimate }: burgerTypeProps) {
 
     return (
         <>
-            <div className={`${styleAnimate} z-10 fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll overflow-y-hidden`}>
+            <div className={`${styleAnimate} z-50 fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll overflow-y-hidden`}>
                 <p onClick={setValueBurger} className="absolute top-[1.5rem] left-[1.25rem] text-yellow text-24">✕</p>
                 <nav className="flex items-center justify-center flex-col gap-[2.5rem] pt-[0.75rem]">
                     {

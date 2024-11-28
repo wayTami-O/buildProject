@@ -1,10 +1,11 @@
 import Image from "next/image";
 import SocialBlock from "@/components/everyPage/socialBlock/SocialBlock";
 import SliderProcess from "@/components/homePage/SliderProcess";
+import SliderStage from "@/components/homePage/SliderStage";
 
 export function HomePage() {
   return (
-    <div className="flex flex-col">
+    <>
       <Image 
         src={'/indexPhoto.png'}
         width={390}
@@ -14,6 +15,7 @@ export function HomePage() {
       />
       <SocialBlock />
       <SliderProcess />
-    </div>
+      <SliderStage />
+    </>
   )
 }
