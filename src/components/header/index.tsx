@@ -3,28 +3,9 @@
 import Image from "next/image";
 import { inter, popins } from "@/styles/fonts";
 import BurgerMenu from "./burgerMenu";
-
-import { create } from "zustand";
+import { useBurger } from "@/common/store/burgerStore";
 
 export type pages = "Главная" | "Расчёт" | "Проекты" | "Команда" | "Франшиза" | "Контакты"
-
-interface burgerType {
-    valueBurger: boolean,
-    setValueBurger: () => void,
-    activePage: pages,
-    setActivePage: (page: pages) => void
-    animateCloseBurger: boolean,
-    setAnimateCloseBurger: () => void
-}
-
-export const useBurger = create<burgerType>((set) => ({
-    valueBurger: false,
-    setValueBurger: () => set((state) => ({ valueBurger: !state.valueBurger })),
-    activePage: "Главная",
-    setActivePage: (page: pages) => set(() => ({ activePage: page })),
-    animateCloseBurger: false,
-    setAnimateCloseBurger: () => set(() => ({ animateCloseBurger: true }))
-}))
 
 export function Header() {
 

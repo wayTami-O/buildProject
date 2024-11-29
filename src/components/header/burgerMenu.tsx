@@ -1,6 +1,7 @@
 'use client'
 
-import { pages, useBurger } from "@/components/header/index";
+import { useBurger } from "@/common/store/burgerStore";
+import { pages} from "@/components/header/index";
 import { inter, popins } from "@/styles/fonts";
 import Link from "next/link";
 import { linksPage } from "@/common/constanst";
