@@ -61,8 +61,8 @@ function BurgerMenu({ styleAnimate }: burgerTypeProps) {
                     }
                 </nav>
                 <div className="flex items-center justify-center flex-col gap-[1.625rem]">
-                    <Link className={`w-[13.563rem] h-[4.625rem] flex justify-center items-center text-[1.5rem] text-white ${inter.className} font-semibold border-[0.063rem] border-yellow rounded-[1.438rem]`} href={"/signIn"}>Вход</Link>
-                    <Link className={`w-[13.563rem] h-[4.625rem] flex justify-center items-center text-[1.5rem] text-white ${inter.className} font-semibold border-[0.063rem] border-yellow rounded-[1.438rem]`} href={"/login"}>Регистрация</Link>
+                    <Link className={`w-[13.563rem] h-[4.625rem] flex justify-center items-center text-[1.5rem] text-white ${inter.className} font-semibold border-[0.063rem] border-yellow rounded-[1.438rem]`} href={linksPage.sign}>Вход</Link>
+                    <Link className={`w-[13.563rem] h-[4.625rem] flex justify-center items-center text-[1.5rem] text-white ${inter.className} font-semibold border-[0.063rem] border-yellow rounded-[1.438rem]`} href={linksPage.reg}>Регистрация</Link>
                 </div>
                 <div className="w-full flex flex-col gap-[0.5rem] border-y-[0.063rem] border-yellow px-[0.625rem] py-[0.5rem]">
                     <div className="flex items-center justify-between">

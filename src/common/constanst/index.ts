@@ -8,6 +8,8 @@ type links = {
     team: string,
     franchise: string,
     contacts: string,
+    reg: string,
+    sign: string
 }
 
 export const linksPage: links = {
@@ -17,4 +19,6 @@ export const linksPage: links = {
     team: '/team',
     franchise: '/franchise',
     contacts: '/contacts',
+    reg: '/registration',
+    sign: '/signIn'
 }

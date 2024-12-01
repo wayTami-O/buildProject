@@ -62,7 +62,16 @@ const config = {
         greyText: "#979797",
         yellowOpacity: "#FFEAB0",
         white71: '#E8E8E8B5',
-        gray: '#A3A3A3'
+        gray: '#A3A3A3',
+        grayA7: '#A7A7A7',
+        gray74: '#747474BD',
+        whiteYellow: '#FFF3D0',
+        yellowWhite47: '#EEBE3978',
+        yellow69: '#FFE292B0',
+        yellow70: '#FFD35AB2',
+        gray83: '#1A1A1AD4',
+        brown9: '#8F7E7E17',
+        whiteF5: '#F5F5F5'
       },
       borderRadius: {
         lg: "var(--radius)",
