@@ -71,7 +71,13 @@ const config = {
         yellow70: '#FFD35AB2',
         gray83: '#1A1A1AD4',
         brown9: '#8F7E7E17',
-        whiteF5: '#F5F5F5'
+        whiteF5: '#F5F5F5',
+        whote72: '#FFFFFFB8',
+        gray23: '#6363633B',
+        yellow53: '#FFE39587',
+        gray9E: '#9E9E9E',
+        red: '#FF6565',
+        grayBE: '#BEBEBE'
       },
       borderRadius: {
         lg: "var(--radius)",
