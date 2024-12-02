@@ -47,6 +47,8 @@ function BurgerMenu({ styleAnimate }: burgerTypeProps) {
     const setValueBurger = useBurger((state) => state.setValueBurger)
     const activePage = useBurger((state) => state.activePage)
 
+    const setActivePage = useBurger((state) => state.setActivePage)
+
     return (
         <>
             <div className={`${styleAnimate} z-50 fixed flex flex-col gap-[3.688rem] w-full h-full bg-dark px-[1.25rem] py-[1.5rem] overflow-x-scroll overflow-y-hidden`}>
@@ -54,8 +56,10 @@ function BurgerMenu({ styleAnimate }: burgerTypeProps) {
                 <nav className="flex items-center justify-center flex-col gap-[2.5rem] pt-[0.75rem]">
                     {
                         arrayBurgerButtons.map((el, index) => {
-                            return <Link className={`${inter.className} text-[2rem] leading-[2.438rem] ${ activePage == el.title ? `text-white` : `text-greyText` }`} key={index} href={el.link}>
-                                {el.title}
+                            return <Link onClick={() => setActivePage(el.title)} 
+                                    className={`${inter.className} text-[2rem] leading-[2.438rem] ${ activePage == el.title ? `text-white` : `text-greyText` }`} 
+                                    key={index} href={el.link}>
+                                    {el.title}
                                 </Link>
                         })
                     }

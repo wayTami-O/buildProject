@@ -14,7 +14,7 @@ export const useBurger = create<burgerType>((set) => ({
     valueBurger: false,
     setValueBurger: () => set((state) => ({ valueBurger: !state.valueBurger })),
     activePage: "Главная",
-    setActivePage: (page: pages) => set(() => ({ activePage: page })),
+    setActivePage: (page: pages) => set((state) => ({ activePage: page, valueBurger: !state.valueBurger })),
     animateCloseBurger: false,
     setAnimateCloseBurger: () => set(() => ({ animateCloseBurger: true }))
 }))
