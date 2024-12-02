@@ -54,9 +54,10 @@ function SliderProcess() {
             >
                 {dataSlider.map((el, index) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide
+                            key={index} 
+                        >
                             <SlideProcess 
-                                key={index} 
                                 title={el.title}
                                 text={el.text}
                                 link={el.link}
