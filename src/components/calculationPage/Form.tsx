@@ -1,8 +1,12 @@
+'use client'
+
 import { inter } from "@/styles/fonts";
 import ButtonYellow from "../everyPage/Button";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { useFormik } from "formik";
 import { z } from "zod";
+import Link from "next/link";
+import { linksPage } from "@/common/constanst";
 
 const Schema = z.object({
     room: z.string().min(1, 'Название комнаты обязательно').max(50, 'Название слишком длинное'),
@@ -49,6 +53,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="room">Название комнаты</label>
                     <input 
                         id="room"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.room}
                         placeholder="Например: зал"
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -57,6 +64,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="walls">Стены</label>
                     <input 
                         id="walls"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.walls}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -65,6 +75,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="ceiling">Потолок</label>
                     <input 
                         id="ceiling"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.ceiling}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -73,6 +86,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="floor">Пол</label>
                     <input 
                         id="floor"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.floor}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -81,6 +97,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="plumbing">Сантехника</label>
                     <input 
                         id="plumbing"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.plumbing}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -89,6 +108,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="powerSupply">Электроснабжение:</label>
                     <input 
                         id="powerSupply"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.powerSupply}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -100,6 +122,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="roomExamples">Периметр комнаты м.:</label>
                     <input 
                         id="roomExamples"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.roomExamples}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -108,6 +133,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="roomHeight">Высота комнаты м.</label>
                     <input 
                         id="roomHeight"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.roomHeight}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -116,6 +144,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="square">Площадь комнаты м2:</label>
                     <input 
                         id="square"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.square}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -124,6 +155,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="sockets">Количество необходимых розеток и выключателей шт.</label>
                     <input 
                         id="sockets"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.sockets}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -132,6 +166,9 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="openingHeight">Высота проёма м. (Окно, дверь, арка.):</label>
                     <input 
                         id="openingHeight"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.openingHeight}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
@@ -140,13 +177,17 @@ function Form() {
                     <label className={`${inter.className} w-full text-[0.875rem] text-white`} htmlFor="openingWidth">Ширина проёма м.</label>
                     <input 
                         id="openingWidth"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.openingWidth}
                         placeholder="- - - - "
                         className="py-[0.688rem] px-[0.563rem] bg-gray23 text-white rounded-[0.563rem] border-[0.063rem]"
                         type="text" />
                 </fieldset>
                 <ButtonYellow text="Добавить еще один проем" />
                 <ButtonYellow text="Удалить один проем" />
-                <ButtonYellow text="Рассчитать" submit />
+                {/* <ButtonYellow text="Рассчитать" submit /> */}
+                <Link href={linksPage.calculationResult} className="flex justify-center items-center w-[12.938rem] h-[2.688rem] rounded-[0.625rem] bg-yellow70 text-white text-[1.125rem]">Рассчитать</Link>
             </form>
         </div>
     );
