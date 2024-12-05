@@ -73,7 +73,7 @@ export function Header() {
                         className="w-[1.5rem] h-[1rem]"
                         onClick={handleOpen}
                     />
-                    <p className={`${popins.className} text-11 text-white`}>Профиль</p>
+                    <Link href={linksPage.profile} className={`${popins.className} text-11 text-white`}>Профиль</Link>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-[0.313rem]">
                     <Image 

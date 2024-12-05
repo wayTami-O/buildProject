@@ -11,7 +11,7 @@ type links = {
     contacts: string,
     reg: string,
     sign: string,
-
+    profile: string
 }
 
 export const linksPage: links = {
@@ -23,5 +23,6 @@ export const linksPage: links = {
     franchise: '/franchise',
     contacts: '/contacts',
     reg: '/registration',
-    sign: '/signIn'
+    sign: '/signIn',
+    profile: '/profile'
 }
