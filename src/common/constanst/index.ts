@@ -11,7 +11,9 @@ type links = {
     contacts: string,
     reg: string,
     sign: string,
-    profile: string
+    profile: string,
+    editProfile: string,
+    changePassword: string
 }
 
 export const linksPage: links = {
@@ -24,5 +26,7 @@ export const linksPage: links = {
     contacts: '/contacts',
     reg: '/registration',
     sign: '/signIn',
-    profile: '/profile'
+    profile: '/profile',
+    editProfile: '/profile/editProfile',
+    changePassword: '/profile/changePassword'
 }

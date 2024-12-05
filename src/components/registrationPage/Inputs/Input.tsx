@@ -38,7 +38,7 @@ function CustomInput(props: InputPlaceholder) {
                 {
                     valuePlaceholder && <span className={`${popins.className} absolute z-10 top-[0.66rem] left-[0.688rem] text-gray9E`}>{props.placeholder} <span className="text-red">*</span></span>
                 }
-            </div>  
+            </div>
         </>
     );
 }

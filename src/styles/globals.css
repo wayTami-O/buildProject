@@ -105,3 +105,7 @@ html {
     font-size: 4.103vw;
   }
 }
+
+.center {
+  @apply flex justify-center items-center
+}

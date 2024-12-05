@@ -24,114 +24,6 @@ const formSchema = z.object({
     path: ["confirmPassword"], 
 });
 
-
-// function Form() {
-
-//     const formik = useFormik({
-//         initialValues: {
-//             firstName: "",
-//             lastName: "",
-//             username: "",
-//             email: "",
-//             phone: "",
-//             password: "",
-//             confirmPassword: "",
-//         },
-//         validationSchema: toFormikValidationSchema(formSchema),
-//         onSubmit: (values) => {
-//             console.log("Submitted values:", values);
-//         },
-//     });
-
-//     const handleSubmit = () => {
-//         console.log('wwww')
-//     }
-
-//     return (
-//         <>
-//             <div className="py-[2.438rem] px-[0.938rem] bg-dark">
-//                 <form 
-//                     onSubmit={formik.handleSubmit}
-//                     className="flex flex-col gap-[2.438rem] justify-center items-center"
-//                     >
-//                     <div className="flex flex-col gap-[1.313rem]">
-//                         <fieldset className="flex gap-[1.5rem] pb-[0.438rem]">
-//                             <CustomInput 
-//                                 placeholder="Имя" 
-//                                 size="small" 
-//                                 id="firstName" 
-//                                 value={formik.values.firstName} 
-//                                 onBlurProps={formik.handleBlur} 
-//                                 onChangeProps={formik.handleChange} 
-//                             />
-//                             <CustomInput 
-//                                 placeholder="Фамилия" 
-//                                 size="small"  
-//                                 id="lastName" 
-//                                 value={formik.values.lastName} 
-//                                 onBlurProps={formik.handleBlur} 
-//                                 onChangeProps={formik.handleChange} 
-//                             />
-//                         </fieldset>
-//                         <CustomInput 
-//                             placeholder="Имя пользователя" 
-//                             size="big"  
-//                             id="username" 
-//                             value={formik.values.username} 
-//                             onBlurProps={formik.handleBlur} 
-//                             onChangeProps={formik.handleChange} 
-//                         />
-//                         <p className={`${popins.className} text-[0.813rem] text-grayBE`}>Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_.</p>
-//                     </div>
-//                     <div className="flex flex-col gap-[1.75rem] w-full">
-//                         <CustomInput 
-//                             placeholder="Email" 
-//                             size="big" 
-//                             id="email"
-//                             value={formik.values.email}
-//                             onBlurProps={formik.handleBlur}
-//                             onChangeProps={formik.handleChange} 
-//                         />
-//                         <CustomInput 
-//                             placeholder="Номер телефона" 
-//                             size="big" 
-//                             id="phone"
-//                             value={formik.values.phone}
-//                             onBlurProps={formik.handleBlur}
-//                             onChangeProps={formik.handleChange} 
-//                         />
-//                         <CustomInput 
-//                             placeholder="Пароль" 
-//                             size="big"
-//                             id="password"
-//                             value={formik.values.password}
-//                             onBlurProps={formik.handleBlur}
-//                             onChangeProps={formik.handleChange} 
-//                         />
-//                         <CustomInput 
-//                             placeholder="Подтверждение пароля" 
-//                             size="big" 
-//                             id="confirmPassword"
-//                             value={formik.values.confirmPassword}
-//                             onBlurProps={formik.handleBlur}
-//                             onChangeProps={formik.handleChange}
-//                         />
-//                     </div>
-//                     <ul className="flex flex-col gap-[0.25rem] pl-[1.1rem] pr-[0.344rem] list-disc text-grayBE">
-//                         <li className={`${popins.className} text-[0.813rem]`}>Пароль не должен быть слишком похож на другую вашу личную информацию.</li>
-//                         <li className={`${popins.className} text-[0.813rem]`}>Ваш пароль должен содержать как минимум 8 символов.</li>
-//                         <li className={`${popins.className} text-[0.813rem]`}>Пароль не должен быть слишком простым и распространенным.</li>
-//                         <li className={`${popins.className} text-[0.813rem]`}>Пароль не может состоять только из цифр.</li>
-//                     </ul>
-//                     <p className={`px-[1.375rem] text-grayBE text-[0.813rem]`}>Для подтверждения введите, пожалуйста, пароль ещё раз.</p>
-//                     <button type="submit" onClick={handleSubmit}>Зарегистрироваться</button>
-//                     {/* <ButtonYellow text="Зарегистрироваться" submit /> */}
-//                 </form>
-//             </div>
-//         </>
-//     );
-// }
-
 function Form() {
     const formik = useFormik({
         initialValues: {
@@ -148,10 +40,6 @@ function Form() {
             console.log("Submitted values:", values);
         },
     });
-
-    const handleSubmit = () => {
-        console.log('wwww')
-    }
 
     return (
         <>

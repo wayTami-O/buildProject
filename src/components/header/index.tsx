@@ -119,15 +119,6 @@ export function Header() {
                     </div>
                 </SheetContent>
             </Sheet>
-   
-   
-            {/* {
-                valueBurger
-                ? <BurgerMenu styleAnimate="animate-slideInFromLeft" />
-                : animateCloseBurger 
-                    ? <BurgerMenu styleAnimate="animate-slideToFromLeft transform translate-x-[-100%]" /> 
-                    : null
-            } */}
         </>
     );
 }
