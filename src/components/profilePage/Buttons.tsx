@@ -21,12 +21,14 @@ function Buttons() {
             <div className="flex flex-col gap-[1.75rem] justify-center">
                 <p className={`${inter.className} text-[1.25rem] text-[#FFD971]`}>Ваш список сохраненных смет</p>
                 {
-                    data.map((el, index) => {
+                    
+                    data?.map((el, index) => {
                         return <Smeta 
                             key={index} 
                             title={el.title} /> 
                     })
                 }
+                
             </div>
         </div>
     )
