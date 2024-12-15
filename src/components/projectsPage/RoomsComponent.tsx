@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogTitle } from "../ui/dialog";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css'
+import { Navigation } from "swiper/modules";
 
 interface roomSwiper {
     img: string
@@ -54,8 +55,18 @@ function RoomsComponent(props: roomConstructor) {
                 <DialogContent className={`center bg-transparent border-none`}>
                     <DialogTitle className="hidden"></DialogTitle>
                     
+                    <p onClick={() => setOpenDialog(false)} className="absolute top-[-1rem] right-[1.25rem] text-yellow text-24">✕</p>
+
                     <Swiper
                         className="w-[23.75rem]"
+                        spaceBetween={60}
+                        navigation={{
+                            nextEl: '#nextSlide',
+                            prevEl: '#prevSlide'
+                        }}
+                        modules={[Navigation]}
+                        slidesPerView={1}
+                        loop
                     >
                         {
                             arraySwiper.map((el, index) => {
@@ -72,7 +83,23 @@ function RoomsComponent(props: roomConstructor) {
                             })
                         }
                     </Swiper>
-                    <div className="absolute z-50 w-[1.25rem] h-[1.5rem] bg-yellow rounded-[0.188rem] border-[0.063rem] border-black" id="prevSlide">www</div>
+                    <div className="absolute left-[1.75rem] z-50 center w-[1.25rem] h-[1.5rem] bg-yellow rounded-[0.188rem] border-[0.063rem] border-black rotate-180" id="prevSlide">
+                        <Image 
+                            src={"/arrowSlider.svg"}
+                            alt="arrow"
+                            width={9}
+                            height={16}
+                        />
+                    </div>
+                    <div className="absolute right-[1.75rem] z-50 center w-[1.25rem] h-[1.5rem] bg-yellow rounded-[0.188rem] border-[0.063rem] border-black" id="nextSlide">
+                        <Image 
+                            src={"/arrowSlider.svg"}
+                            alt="arrow"
+                            width={9}
+                            height={16}
+                        />
+                    </div>
+
                 </DialogContent>
             </Dialog>
         </>
