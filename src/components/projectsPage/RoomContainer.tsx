@@ -11,7 +11,7 @@ function RoomContainer() {
                 <RoomsComponent text="Кухня" img="/kitchen.png" />
             </div>
         </>
-    );
+    )
 }
-// WayByeLive87431256*&^)(
+
 export default RoomContainer;

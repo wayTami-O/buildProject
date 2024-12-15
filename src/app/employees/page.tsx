@@ -1,5 +1,7 @@
+import EmployeesPage from "@/page/employees";
+
 function Employees() {
-    return ;
+    return <EmployeesPage />;
 }
 
 export default Employees;

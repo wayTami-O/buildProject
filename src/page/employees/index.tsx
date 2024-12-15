@@ -1,7 +1,9 @@
+import TableEmployees from "@/components/employeesPage/TableEmploees";
+
 function EmployeesPage() {
     return (
         <>
-            <div className="www">wwww</div>
+            <TableEmployees />
         </>
     );
 }
